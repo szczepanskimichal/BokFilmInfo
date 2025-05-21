@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BokFilmInfo", "BokFilmInfo.csproj", "{8B494101-D1E8-4987-90CE-B0CACD88C5DB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8B494101-D1E8-4987-90CE-B0CACD88C5DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B494101-D1E8-4987-90CE-B0CACD88C5DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B494101-D1E8-4987-90CE-B0CACD88C5DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B494101-D1E8-4987-90CE-B0CACD88C5DB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CB2252F9-E698-4ED1-A40F-BF88A752A1CD}
+	EndGlobalSection
+EndGlobal
