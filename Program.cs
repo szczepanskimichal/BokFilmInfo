@@ -1,60 +1,53 @@
 ﻿using System;
-using System.Collections.Generic;
 
-class Program
+
+List<Produkt> produkter = new List<Produkt>();
+
+Console.WriteLine("Hvor mange filmer eller bøker vil du legge til?");
+int antall = int.Parse(Console.ReadLine() ?? "0");
+
+for (int i = 0; i < antall; i++)
 {
-    static void Main()
-    {
-        List<Produkt> produkter = new List<Produkt>();
+    Console.WriteLine($"\nLegg inn informasjon for produkt {i + 1}:");
 
-        Console.WriteLine("Hvor mange filmer eller bøker vil du legge til?");
-        int antall = int.Parse(Console.ReadLine());
+    Console.Write("Er det en bok eller film? (skriv 'bok' eller 'film'): ");
+    string type = Console.ReadLine()?.ToLower() ?? string.Empty;
 
-        for (int i = 0; i < antall; i++)
-        {
-            Console.WriteLine($"\nLegg inn informasjon for produkt {i + 1}:");
+    Console.Write("Tittel: ");
+    string tittel = Console.ReadLine() ?? string.Empty;
 
-            Console.Write("Er det en bok eller film? (skriv 'bok' eller 'film'): ");
-            string type = Console.ReadLine().ToLower();
+    Console.Write("År: ");
+    Console.Write("Beskrivelse: ");
+    string beskrivelse = Console.ReadLine() ?? string.Empty;
 
-            Console.Write("Tittel: ");
-            string tittel = Console.ReadLine();
+    Console.Write("Forfatter/Regissør: ");
+    string skaper = Console.ReadLine() ?? string.Empty;
 
-            Console.Write("År: ");
-            int år = int.Parse(Console.ReadLine());
+    Console.Write("Hvem spilte med / hovedperson(er): ");
+    string hovedpersoner = Console.ReadLine() ?? string.Empty;
 
-            Console.Write("Beskrivelse: ");
-            string beskrivelse = Console.ReadLine();
+    string år = Console.ReadLine();
+    Produkt p = new Produkt(type, tittel, år, beskrivelse, skaper, hovedpersoner);
+    produkter.Add(p);
+}
 
-            Console.Write("Forfatter/Regissør: ");
-            string skaper = Console.ReadLine();
+Console.WriteLine("\n Her er produktene du skrev inn:\n");
 
-            Console.Write("Hvem spilte med / hovedperson(er): ");
-            string hovedpersoner = Console.ReadLine();
-
-            Produkt p = new Produkt(type, tittel, år, beskrivelse, skaper, hovedpersoner);
-            produkter.Add(p);
-        }
-
-        Console.WriteLine("\n📝 Her er produktene du skrev inn:\n");
-
-        foreach (var p in produkter)
-        {
-            p.VisInfo();
-        }
-    }
+foreach (var p in produkter)
+{
+    p.VisInfo();
 }
 
 class Produkt
 {
      string Type;
      string Tittel;
-     int År;
+     string År;
      string Beskrivelse;
      string Skaper; 
      string Hovedpersoner;
 
-    public Produkt(string type, string tittel, int år, string beskrivelse, string skaper, string hovedpersoner)
+    public Produkt(string type, string tittel, string år, string beskrivelse, string skaper, string hovedpersoner)
     {
         Type = type;
         Tittel = tittel;
